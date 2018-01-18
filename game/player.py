@@ -16,8 +16,8 @@ class Player:
         self.num   = kwargs.get("num", 1)
         self.score = kwargs.get("score", 0)
         self.bot   = kwargs.get("bot", False)
-        self.last  = (0, 0)
-        self.dir   = 0
+        self.last  = None
+        self.dir   = None
         if self.bot:
             self.auto_place_ships()
         
@@ -91,7 +91,7 @@ class Player:
                 return None
                 
             if menu.lower() == "random all":
-                self.auto_place_ship(ship)
+                self.auto_place_ships()
                 return True
             
             coords = self.board.check_point(menu)
@@ -123,7 +123,7 @@ class Player:
                 return None
                 
             if menu.lower() == "random all":
-                self.auto_place_ship(ship)
+                self.auto_place_ships()
                 return True
             
             if not menu.lower() in ["up", "down", "left", "right"]:
@@ -148,10 +148,55 @@ class Player:
             
             # Ship placed at this point!
             return None
+            
+    def auto_take_shot(self, player):
+        # Do we have a previous hit stored?
+        # Temp setting to always randomize
+        self.last = None
+        # Remove to enable the rest
+        if not self.last:
+            # Random shot time!
+            while True:
+                x = random.choice(list("abcdefghij")[:player.board.w])
+                y = random.randint(1, player.board.w)
+                coords = player.board.check_point("{}{}".format(x, y))
+                if not coords:
+                    continue
+                # Got a thing!
+                out = player.board.take_shot(coords)
+                if out["shot"][0]:
+                    # Was a hit, remember it
+                    self.last = [(coords[0], coords[1], random.randint(0, 3))]
+                self.shot_output(out, bot = True)
+                return
+        
+        # We hit something before!
+        # self.last should be a list of (x, y, direction) coords
+        dx = dy = 0
+        if self.dir == 0:
+            dy = +1
+        elif self.dir == 1:
+            dy = -1
+        elif self.dir == 2:
+            dx = -1
+        else:
+            dx = +1
+            
+    def shoot_random(self, player):
+        # Random shot time!
+        while True:
+            x = random.choice(list("abcdefghij")[:player.board.w])
+            y = random.randint(1, player.board.w)
+            coords = player.board.check_point("{}{}".format(x, y))
+            if not coords:
+                continue
+            # Got a thing!
+            self.shot_output(player.board.take_shot(coords))
+            return
         
     def take_shot(self, player):
         if self.bot:
-            self.auto_take_shot(self, player)
+            self.auto_take_shot(player)
             return
         # Displays the current board and compares to the player's board for hit detection
         while True:
@@ -164,6 +209,10 @@ class Player:
             ))
             print(" ")
             menu = utils.get("Where would you like to shoot? (A1, B3, etc):  ")
+            
+            if menu.lower() == "random":
+                self.shoot_random(player)
+                return
             
             coords = self.board.check_point(menu)
             if coords == None:
@@ -192,7 +241,7 @@ class Player:
             break
 
                 
-    def shot_output(self, output):
+    def shot_output(self, output, *, bot = False):
         # Prints the output in a human-readable way
         # Do some animation here...
         
@@ -205,9 +254,15 @@ class Player:
         utils.cls()
         utils.head("Player " + str(self.num) + " Fired!")
         print(" ")
-        print("You " + title)
+        if bot:
+            print("The Bot " + title)
+        else:
+            print("You " + title)
         print(" ")
         utils.get("Press [enter] to continue...")
     
     def check_end(self):
-        pass
+        for ship in self.board.ships:
+            if not ship.check_sunk():
+                return False
+        return True
