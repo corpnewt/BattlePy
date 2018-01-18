@@ -13,25 +13,27 @@ class Player:
 
     def __init__(self, **kwargs):
         self.board = board.Board(player=self)
+        self.game  = kwargs.get("game", None)
         self.num   = kwargs.get("num", 1)
         self.score = kwargs.get("score", 0)
         self.bot   = kwargs.get("bot", False)
         self.last  = None
         self.dir   = None
+        self.tship = 5
         if self.bot:
             self.auto_place_ships()
         
     def place_ships(self):
         # Method to place all ships on the board
-        if self.place_ship(ships.Carrier(player=self, board=self.board)):
+        if self.place_ship(ships.Carrier(player=self, board=self.board), 1):
             return
-        if self.place_ship(ships.Battleship(player=self, board=self.board)):
+        if self.place_ship(ships.Battleship(player=self, board=self.board), 2):
             return
-        if self.place_ship(ships.Cruiser(player=self, board=self.board)):
+        if self.place_ship(ships.Cruiser(player=self, board=self.board), 3):
             return
-        if self.place_ship(ships.Submarine(player=self, board=self.board)):
+        if self.place_ship(ships.Submarine(player=self, board=self.board), 4):
             return
-        if self.place_ship(ships.Destroyer(player=self, board=self.board)):
+        if self.place_ship(ships.Destroyer(player=self, board=self.board), 5):
             return
         # Give our output of the board
         utils.cls()
@@ -39,7 +41,8 @@ class Player:
         print(" ")
         print(self.board)
         print(" ")
-        input("Press [enter] to continue...")
+        if not self.game.debug:
+            input("Press [enter] to continue...")
         
     def auto_place_ships(self):
         # Method to auto-place all ships
@@ -54,7 +57,8 @@ class Player:
         print(" ")
         print(self.board)
         print(" ")
-        input("Press [enter] to continue...")
+        if not self.game.debug:
+            input("Press [enter] to continue...")
         
     def auto_place_ship(self, ship):
         # Method to randomly place a single ship
@@ -72,11 +76,11 @@ class Player:
                 continue
             break
         
-    def place_ship(self, ship):
+    def place_ship(self, ship, num):
         # Method to place a single ship
         while True:
             utils.cls()
-            utils.head("Player " + str(self.num) + " Placing " + ship.type)
+            utils.head("Player " + str(self.num) + " Placing " + ship.type + ", {}/{}".format(num, self.tship))
             print(" ")
             print(ship.type + ", {} {}.".format(ship.size, "space" if ship.size == 1 else "spaces"))
             print(" ")
@@ -108,7 +112,7 @@ class Player:
             ship.x, ship.y = coords[0], coords[1]
             
             utils.cls()
-            utils.head("Player " + str(self.num) + " Placing " + ship.type)
+            utils.head("Player " + str(self.num) + " Orienting " + ship.type + ", {}/{}".format(num, self.tship))
             print(" ")
             print(ship.type + ", {} {}.".format(ship.size, "space" if ship.size == 1 else "spaces"))
             print(" ")
@@ -167,7 +171,7 @@ class Player:
                 if out["shot"][0]:
                     # Was a hit, remember it
                     self.last = [(coords[0], coords[1], random.randint(0, 3))]
-                self.shot_output(out, bot = True)
+                self.shot_output(out, player = player)
                 return
         
         # We hit something before!
@@ -237,29 +241,36 @@ class Player:
                 continue
                 
             # Valid - add it
-            self.shot_output(player.board.take_shot(coords))
+            self.shot_output(player.board.take_shot(coords), player)
             break
 
                 
-    def shot_output(self, output, *, bot = False):
+    def shot_output(self, output, player):
         # Prints the output in a human-readable way
         # Do some animation here...
+        
+        if self.game.quiet:
+            return
+
+        if self.bot:
+            subject = "Bot " + str(self.num)
+        if player.bot:
+            target  = "Bot " + str(player.num)
         
         title = "MISSED!"
         if output["shot"][0]:
             title = "HIT!"
             if output["shot"][1]:
-                title = "SUNK Player {}'s {}!".format(output["ship"].player.num, output["ship"].type)
+                title = "SUNK {}'s {}!".format(target, output["ship"].type)
         
         utils.cls()
-        utils.head("Player " + str(self.num) + " Fired!")
+        utils.head(subject + " Fired!")
         print(" ")
-        if bot:
-            print("The Bot " + title)
-        else:
-            print("You " + title)
+        print(subject + " " + title)
         print(" ")
-        utils.get("Press [enter] to continue...")
+        
+        if not self.game.debug:
+            utils.get("Press [enter] to continue...")
     
     def check_end(self):
         for ship in self.board.ships:
