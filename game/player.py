@@ -8,6 +8,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '.'))
 import board
 import utils
 import ships
+import animations
 
 class Player:
 
@@ -195,7 +196,7 @@ class Player:
             if not coords:
                 continue
             # Got a thing!
-            self.shot_output(player.board.take_shot(coords))
+            self.shot_output(player.board.take_shot(coords), player = player)
             return
         
     def take_shot(self, player):
@@ -251,18 +252,30 @@ class Player:
         
         if self.game.quiet:
             return
-
-        if self.bot:
-            subject = "Bot " + str(self.num)
-        if player.bot:
-            target  = "Bot " + str(player.num)
         
+        subject =  "Bot " if self.bot else "Player "
+        subject += str(self.num)
+        target  =  "Bot " if player.bot else "Player "
+        target  += str(player.num)
+        
+        anim = 0 # 0 = miss, 1 = hit, 2 = sunk
         title = "MISSED!"
         if output["shot"][0]:
+            anim = 1
             title = "HIT!"
             if output["shot"][1]:
+                anim = 2
                 title = "SUNK {}'s {}!".format(target, output["ship"].type)
         
+        # Animate!
+        a = animations.Animate()
+        if anim == 0:
+            a.miss()
+        elif anim == 1:
+            a.hit()
+        elif anim == 2:
+            a.sunk()
+
         utils.cls()
         utils.head(subject + " Fired!")
         print(" ")

@@ -113,8 +113,8 @@ class Game():
 
 g = Game()
                 
-#g.one_player()
+g.one_player()
 #g.bot_players()
-g.two_players()
+#g.two_players()
 
 input("Press [enter] to quit...")

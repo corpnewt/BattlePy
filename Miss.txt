@@ -1,0 +1,214 @@
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=  "
+set "frame5="
+set "frame6=  ____/\_|-\____=__^==>"
+set "frame7=  \                 /"
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation 1000
+
+if "!playSounds!"=="1" start "" /MIN powershell -c (New-Object Media.SoundPlayer '!thisDir!Sounds\!shootSound!').PlaySync();
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=  "
+set "frame5=                      /"
+set "frame6=  ____/\_|-\____=__^=>*"
+set "frame7=  \                 / \"
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=  "
+set "frame5=                      ."
+set "frame6=  ____/\_|-\____=__^=>  *"
+set "frame7=  \                 / ."
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=                       ."
+set "frame5=                      "
+set "frame6=  ____/\_|-\____=__^=>    *"
+set "frame7=  \                 / "
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=                       "
+set "frame5=                      "
+set "frame6=  ____/\_|-\____=__^=>      *"
+set "frame7=  \                 / "
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=                       "
+set "frame5=                      "
+set "frame6=  ____/\_|-\____=__^=>        *"
+set "frame7=  \                 / "
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=                       "
+set "frame5=                      "
+set "frame6=  ____/\_|-\____=__^==>         "
+set "frame7=  \                 / "
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=                       "
+set "frame5=                      "
+set "frame6=        ____=____/-|_/\____    "
+set "frame7=        \                 /"
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation 1000
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=                       "
+set "frame5=                      "
+set "frame6=*       ____=____/-|_/\____    "
+set "frame7=        \                 /"
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=                       "
+set "frame5=                      "
+set "frame6=        ____=____/-|_/\____    "
+set "frame7=  *     \                 /"
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+if "!playSounds!"=="1" start "" /MIN powershell -c (New-Object Media.SoundPlayer '!thisDir!Sounds\!missSound!').PlaySync();
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=                       "
+set "frame5=                      "
+set "frame6=        ____=____/-|_/\____    "
+set "frame7=        \                 /"
+set "frame8=~~~~~\*|~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=                       "
+set "frame5=                      "
+set "frame6=     .  ____=____/-|_/\____    "
+set "frame7=    . . \                 /"
+set "frame8=~~~~~\ /~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=                       "
+set "frame5=    .                 "
+set "frame6=  .   . ____=____/-|_/\____    "
+set "frame7=        \                 /"
+set "frame8=~~~~~\-/~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=  .                    "
+set "frame5=.      .              "
+set "frame6=        ____=____/-|_/\____    "
+set "frame7=        \                 /"
+set "frame8=~~~~~/\~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=.                      "
+set "frame5=                      "
+set "frame6=        ____=____/-|_/\____    "
+set "frame7=        \                 /"
+set "frame8=~~~~~-\~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=                      "
+set "frame5=                      "
+set "frame6=        ____=____/-|_/\____    "
+set "frame7=        \                 /"
+set "frame8=~~~~~~-~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=                      "
+set "frame5=                      "
+set "frame6=        ____=____/-|_/\____    "
+set "frame7=        \                 /"
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation 1000
+
+set "frame1=  "
+set "frame2=            M            "
+set "frame3=  "
+set "frame4=                      "
+set "frame5=                      "
+set "frame6=        ____=____/-|_/\____    "
+set "frame7=        \                 /"
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=            MI            "
+set "frame3=  "
+set "frame4=                      "
+set "frame5=                      "
+set "frame6=        ____=____/-|_/\____    "
+set "frame7=        \                 /"
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=            MIS            "
+set "frame3=  "
+set "frame4=                      "
+set "frame5=                      "
+set "frame6=        ____=____/-|_/\____    "
+set "frame7=        \                 /"
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=            MISS            "
+set "frame3=  "
+set "frame4=                      "
+set "frame5=                      "
+set "frame6=        ____=____/-|_/\____    "
+set "frame7=        \                 /"
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation 2000
+goto :EOF

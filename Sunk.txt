@@ -1,0 +1,415 @@
+REM Sunk Animation
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=  "
+set "frame5="
+set "frame6=  ____/\_|-\____=__^==>"
+set "frame7=  \                 /"
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation 1000
+
+if "!playSounds!"=="1" start "" /MIN powershell -c (New-Object Media.SoundPlayer '!thisDir!Sounds\!shootSound!').PlaySync();
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=  "
+set "frame5=                      /"
+set "frame6=  ____/\_|-\____=__^=>*"
+set "frame7=  \                 / \"
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=  "
+set "frame5=                      ."
+set "frame6=  ____/\_|-\____=__^=>  *"
+set "frame7=  \                 / ."
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=                       ."
+set "frame5=                      "
+set "frame6=  ____/\_|-\____=__^=>    *"
+set "frame7=  \                 / "
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=                       "
+set "frame5=                      "
+set "frame6=  ____/\_|-\____=__^=>      *"
+set "frame7=  \                 / "
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=                       "
+set "frame5=                      "
+set "frame6=  ____/\_|-\____=__^=>        *"
+set "frame7=  \                 / "
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=                       "
+set "frame5=                      "
+set "frame6=  ____/\_|-\____=__^==>         "
+set "frame7=  \                 / "
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=                       "
+set "frame5=                      "
+set "frame6=        ____=____/-|_/\____    "
+set "frame7=        \                 /"
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation 1000
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=                       "
+set "frame5=*                      "
+set "frame6=        ____=____/-|_/\____    "
+set "frame7=        \                 /"
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=                       "
+set "frame5=  *                      "
+set "frame6=        ____=____/-|_/\____    "
+set "frame7=        \                 /"
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=                       "
+set "frame5=    *                  "
+set "frame6=        ____=____/-|_/\____    "
+set "frame7=        \                 /"
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=                       "
+set "frame5=                      "
+set "frame6=       *____=____/-|_/\____    "
+set "frame7=        \                 /"
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+if "!playSounds!"=="1" start "" /MIN powershell -c (New-Object Media.SoundPlayer '!thisDir!Sounds\!sunkSound!').PlaySync();
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=                       "
+set "frame5=        .              "
+set "frame6=        _/._=____/-|_/\____    "
+set "frame7=       .\                 /"
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=  "
+set "frame4=       .               "
+set "frame5=      \    .          "
+set "frame6=     .  _  _=____/-|_/\____    "
+set "frame7=        \                 /"
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=     ."
+set "frame4=            .           "
+set "frame5=   -                  "
+set "frame6=    .   _  _=____/-|_/\____    "
+set "frame7=        \                 /"
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=      "
+set "frame4=   .         .          "
+set "frame5=                      "
+set "frame6= /      _  _=____/-|_/\____    "
+set "frame7=  .     \                 /"
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=      "
+set "frame4=                       "
+set "frame5=.               .     "
+set "frame6=        _  _=____/-|_/\____    "
+set "frame7=        \                 /"
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=      "
+set "frame4=                       "
+set "frame5=                    "
+set "frame6=        _  _=____/-|_/\____    "
+set "frame7=        \                 /"
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=      "
+set "frame4=                       "
+set "frame5=                    "
+set "frame6=        _  _=_/._/-|_/\____    "
+set "frame7=        \                 /"
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=      "
+set "frame4=               .        "
+set "frame5=             |   .    "
+set "frame6=        _  _=_  _/-|_/\____    "
+set "frame7=        \                 /"
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=            .                  "
+set "frame4=                   .           "
+set "frame5=          -                    "
+set "frame6=        _  _=_  _/-|_/\/.__    "
+set "frame7=        \                 /    "
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=                               "
+set "frame4=        .               .      "
+set "frame5=                     .|   .    "
+set "frame6=      / _  _=_  _/-|_/\  __    "
+set "frame7=        \                 /    "
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=                          .    "
+set "frame4=                     \       . "
+set "frame5=      .                        "
+set "frame6=        _  _=_  _/-|_/\  __    "
+set "frame7=    |   \                 /    "
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=                    -         ."
+set "frame4=                               "
+set "frame5=                               "
+set "frame6=     .  _  _=_  _/-|_/\  __    "
+set "frame7=        \                 /    "
+set "frame8=~~~\~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=                               "
+set "frame4=                   /           "
+set "frame5=                               "
+set "frame6=        _  _=_  _/-|_/\  __    "
+set "frame7=    .   \                 /    "
+set "frame8=~~~-~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=                               "
+set "frame4=                               "
+set "frame5=                  |            "
+set "frame6=        _  _=_  _/-|_/\  __    "
+set "frame7=        \                 /    "
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=                               "
+set "frame4=                               "
+set "frame5=                              "
+set "frame6=        _  _=_  \.-|_/\  __    "
+set "frame7=        \                 /    "
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=                               "
+set "frame4=                               "
+set "frame5=              - .              "
+set "frame6=        _  _=_    .|_/\  __    "
+set "frame7=        \                 /    "
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=                               "
+set "frame4=                  .            "
+set "frame5=            /      .           "
+set "frame6=        _  _=_     |_/\  __    "
+set "frame7=        \                 /    "
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=                               "
+set "frame4=                   .           "
+set "frame5=                      .        "
+set "frame6=        _ -_=_     |_/\  __    "
+set "frame7=        \                 /    "
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=                               "
+set "frame4=                    .          "
+set "frame5=                               "
+set "frame6=        \/ _=_     |_/\ .__    "
+set "frame7=        \                 /    "
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=                               "
+set "frame4=                               "
+set "frame5=                       .       "
+set "frame6=       /.  _=_     |_/\  __    "
+set "frame7=        \                 /    "
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=                               "
+set "frame4=                               "
+set "frame5=                               "
+set "frame6=      -    _=_     |_/\  __.   "
+set "frame7=        \                 /    "
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=                               "
+set "frame4=                               "
+set "frame5=                               "
+set "frame6=           _=_     |_/\  __    "
+set "frame7=    /   \                 /    "
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=                               "
+set "frame4=                               "
+set "frame5=                               "
+set "frame6=           _=_     |_/\  __    "
+set "frame7=        \                 /    "
+set "frame8=~~~\~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=                               "
+set "frame4=                               "
+set "frame5=                               "
+set "frame6=           _=_     |_/\  __    "
+set "frame7=        \                 /    "
+set "frame8=~~~-~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=  "
+set "frame3=                               "
+set "frame4=                               "
+set "frame5=                               "
+set "frame6=           _=_     |_/\  __    "
+set "frame7=        \                 /    "
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation 1000
+
+set "frame1=  "
+set "frame2=            S            "
+set "frame3=                               "
+set "frame4=                               "
+set "frame5=                               "
+set "frame6=           _=_     |_/\  __    "
+set "frame7=        \                 /    "
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=            SU            "
+set "frame3=                               "
+set "frame4=                               "
+set "frame5=                               "
+set "frame6=           _=_     |_/\  __    "
+set "frame7=        \                 /    "
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=            SUN            "
+set "frame3=                               "
+set "frame4=                               "
+set "frame5=                               "
+set "frame6=           _=_     |_/\  __    "
+set "frame7=        \                 /    "
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation !defaultTime!
+
+set "frame1=  "
+set "frame2=            SUNK            "
+set "frame3=                               "
+set "frame4=                               "
+set "frame5=                               "
+set "frame6=           _=_     |_/\  __    "
+set "frame7=        \                 /    "
+set "frame8=~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+call :displayAnimation 2000
+goto :EOF
