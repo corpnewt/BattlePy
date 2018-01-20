@@ -48,7 +48,7 @@ class Board:
         sep = "  "
         for a in range(len(b1)):
             out += b1[a] + sep + b2[a] + "\n"   
-        return out
+        return out[:-1]
         
     def __str__(self):
         return self.print_board()
@@ -108,7 +108,21 @@ class Board:
                 r = ret
                 break
         self.shots.append(shot)
-        return { "shot" : r, "ship" : s }
+        return { "shot" : r, "ship" : s, "orig" : shot }
+
+    def test_shot(self, shot):
+        if shot in self.shots:
+            return None
+        s = None
+        r = (False, False)
+        for ship in self.ships:
+            ret = ship.check_shot(shot)
+            if ret[0]:
+                # A hit!
+                s = ship
+                r = ret
+                break
+        return { "shot" : r, "ship" : s, "orig" : shot }
         
     def check_point(self, point):
         # Points should be in A1 format

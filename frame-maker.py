@@ -50,7 +50,7 @@ def main(target, output):
                 elif "2000" in line:
                     animations.append({ "frame" : current_animation, "time" : 2.0 })
                 else:
-                    animations.append({ "frame" : current_animation, "time" : 0.05 })
+                    animations.append({ "frame" : current_animation, "time" : 0.01 })
     json.dump(animations, open(output, "w"), indent=2)
 
 targets = [ "Miss.txt", "Hit.txt", "Sunk.txt" ]
